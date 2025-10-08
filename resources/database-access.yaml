@@ -13,8 +13,6 @@ spec:
   owner: group:experiments/team-alpha
   system: system:experiments/checkout
   provideAccess: component:experiments/dotnet-api-checkout
-  dependencyOf:
-    - component:experiments/dotnet-api-checkout
   dependsOn:
     - resource:experiments/postgresql-checkout
   environment: "development"
@@ -33,8 +31,6 @@ spec:
   owner: group:experiments/team-alpha
   system: system:experiments/checkout
   provideAccess: component:experiments/dotnet-api-checkout
-  dependencyOf:
-    - component:experiments/dotnet-api-checkout
   dependsOn:
     - resource:experiments/postgresql-checkout
   environment: "staging"
@@ -53,8 +49,6 @@ spec:
   owner: group:experiments/team-alpha
   system: system:experiments/checkout
   provideAccess: component:experiments/dotnet-api-checkout
-  dependencyOf:
-    - component:experiments/dotnet-api-checkout
   dependsOn:
     - resource:experiments/postgresql-checkout
   environment: "production"
