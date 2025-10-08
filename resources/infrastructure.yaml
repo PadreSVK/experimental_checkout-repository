@@ -1,0 +1,29 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: postgresql-checkout
+  namespace: experiments
+  title: Checkout PostgreSQL Database
+  description: PostgreSQL database for checkout system
+spec:
+  type: pqsql-database-server
+  lifecycle: production
+  owner: group:experiments/team-alpha
+  system: system:experiments/checkout
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: kafka-topic-orders
+  namespace: experiments
+  title: Orders Kafka Topic
+  description: Kafka topic for order events in checkout system
+spec:
+  type: kafka-topic
+  lifecycle: production
+  owner: group:experiments/team-alpha
+  system: system:experiments/checkout
+  dependsOn:
+    - resource:experiments/kafka-production-cluster
+

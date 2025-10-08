@@ -1,0 +1,25 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: dotnet-api-checkout
+  namespace: experiments
+  title: .NET API Checkout Service
+  description: .NET API service for checkout functionality
+spec:
+  type: dotnet-api
+  lifecycle: production
+  owner: group:experiments/team-alpha
+  system: system:experiments/checkout
+  dependsOn:
+    - resource:experiments/postgresql-checkout
+    - resource:experiments/kafka-topic-orders
+    - resource:experiments/mssql-database-access-dotnet-api-checkout-development
+    - resource:experiments/mssql-database-access-dotnet-api-checkout-staging
+    - resource:experiments/mssql-database-access-dotnet-api-checkout-production
+    - resource:experiments/checkout-main-mssql-database
+    - resource:experiments/k8s-cluster-development
+    - resource:experiments/k8s-cluster-staging
+    - resource:experiments/k8s-cluster-production
+  providesApis:
+    - api:experiments/checkout-v1-api
+    - api:experiments/checkout-v2-api

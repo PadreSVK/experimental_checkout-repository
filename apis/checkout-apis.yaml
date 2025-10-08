@@ -1,0 +1,30 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: checkout-v1-api
+  namespace: experiments
+  title: Checkout API v1
+  description: Version 1 of the Checkout API for processing orders
+spec:
+  type: openapi
+  lifecycle: production
+  owner: group:experiments/team-alpha
+  system: system:experiments/checkout
+  definition:
+    $text: http://dotnet-demo.flux-test-tenant.svc.cluster.local/.less-known/api-docs/v1.json
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: checkout-v2-api
+  namespace: experiments
+  title: Checkout API v2
+  description: Version 2 of the Checkout API for processing orders
+spec:
+  type: openapi
+  lifecycle: production
+  owner: group:experiments/team-alpha
+  system: system:experiments/checkout
+  definition:
+    $text: http://dotnet-demo.flux-test-tenant.svc.cluster.local/.less-known/api-docs/v2.json

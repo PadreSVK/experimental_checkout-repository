@@ -1,0 +1,28 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: checkout-repository-apis
+  description: APIs for the checkout system
+spec:
+  targets:
+    - ./apis/*.yaml
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: checkout-repository-components
+  description: Components for the checkout system
+spec:
+  targets:
+    - ./components/*.yaml
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: checkout-repository-resources
+  description: Resources for the checkout system
+spec:
+  targets:
+    - ./resources/*.yaml

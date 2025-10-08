@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: checkout-web-app
+  namespace: experiments
+  title: Checkout Web Application
+  description: React-based web application for checkout functionality
+spec:
+  type: react-application
+  lifecycle: production
+  owner: group:experiments/team-alpha
+  system: system:experiments/checkout
+  consumesApis:
+    - api:experiments/checkout-v1-api
+    - api:experiments/checkout-v2-api
