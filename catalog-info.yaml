@@ -3,7 +3,6 @@ kind: Location
 metadata:
   name: checkout-repository-apis
   description: APIs for the checkout system
-  namespace: experiments
 spec:
   targets:
     - ./apis/*.yaml
@@ -13,7 +12,6 @@ apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
   name: checkout-repository-components
-  namespace: experiments
   description: Components for the checkout system
 spec:
   targets:
@@ -24,7 +22,6 @@ apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
   name: checkout-repository-resources
-  namespace: experiments
   description: Resources for the checkout system
 spec:
   targets:
